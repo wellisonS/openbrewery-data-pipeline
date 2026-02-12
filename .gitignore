@@ -1,0 +1,30 @@
+# =========================
+# Python / Virtual Env
+# =========================
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+
+# =========================
+# dbt
+# =========================
+target/
+dbt_packages/
+logs/
+
+# dbt profiles (NUNCA versionar)
+profiles.yml
+
+# =========================
+# Databricks / Secrets
+# =========================
+*.env
+
+# =========================
+# OS / Editor
+# =========================
+.vscode/
+.DS_Store
+Thumbs.db

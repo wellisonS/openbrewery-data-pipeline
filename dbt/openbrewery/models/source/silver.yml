@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: silver
+    database: workspace   # catálogo no Databricks
+    schema: silver
+    tables:
+      - name: openbrewery
