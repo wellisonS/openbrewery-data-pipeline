@@ -18,15 +18,20 @@ A camada **Gold** agrega e organiza os dados para facilitar análises como:
 ## 🧱 Estrutura do projeto
 
 ```text
-dbt/
-└── openbrewery/
-    ├── models/
-    │   ├── silver/
-    │   └── gold/
-    ├── tests/
-    ├── macros/
-    ├── dbt_project.yml
-└── profiles.yml
+openbrewery-data-pipeline/
+├── airflow/
+│   ├── dags/
+│   │   └── openbrewery_pipeline.py
+│   ├── Dockerfile
+│   └── requirements.txt
+├── dbt/
+│   └── openbrewery/
+│       ├── models/
+│       │   ├── bronze/
+│       │   ├── silver/
+│       │   └── gold/
+│       └── dbt_project.yml
+├── docker-compose.yml
 ```
 ---
 
