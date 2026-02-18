@@ -2,7 +2,7 @@
 
 ## 📌 Sobre o projeto
 
-Este projeto implementa um **pipeline de dados usando dbt** para processar dados da Open Brewery API seguindo uma arquitetura em camadas (**Silver → Gold**).
+Este projeto implementa um **pipeline de dados usando dbt** para processar dados da Open Brewery API seguindo uma arquitetura em camadas (**Bronze → Silver → Gold**).
 
 O objetivo é:
 - Transformar dados brutos em **dados analíticos confiáveis**
