@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: gold_openbrewery
+    columns:
+      - name: brewery_type
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - micro
+                  - brewpub
+                  - regional
+                  - large
+                  - planning
+                  - contract
+                  - proprietor
+                  - closed
+                  - taproom
+                  - nano
+                  - bar
+
+      - name: state
+        tests:
+          - not_null
+
+      - name: breweries_count
+        tests:
+          - not_null
