@@ -6,3 +6,15 @@ sources:
     schema: silver
     tables:
       - name: openbrewery
+        description: "Tabela silver com dados brutos de cervejarias"
+        columns:
+          - name: id
+            description: "Identificador único da cervejaria"
+            tests:
+              - not_null
+              - unique
+
+          - name: name
+            description: "Nome da cervejaria"
+            tests:
+              - not_null
