@@ -2,8 +2,29 @@ version: 2
 
 models:
   - name: gold_openbrewery
+    description: >
+      Aggregated analytics table that provides the number of breweries
+      by US state and brewery type. This model is built from the
+      silver.openbrewery source and is intended for analytical
+      consumption such as dashboards and exploratory analysis.
+
+    meta:
+      layer: gold
+      grain: state + brewery_type
+      owner: data-engineering
+
     columns:
+      - name: state
+        description: >
+          US state where the breweries are located.
+          This column represents the geographic aggregation level.
+        tests:
+          - not_null
+
       - name: brewery_type
+        description: >
+          Type of brewery as defined by the OpenBrewery API.
+          Examples include micro, brewpub, regional, and others.
         tests:
           - not_null
           - accepted_values:
@@ -21,10 +42,9 @@ models:
                   - nano
                   - bar
 
-      - name: state
-        tests:
-          - not_null
-
       - name: breweries_count
+        description: >
+          Total number of breweries for a given combination
+          of state and brewery type.
         tests:
           - not_null
