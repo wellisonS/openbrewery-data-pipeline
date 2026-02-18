@@ -27,8 +27,7 @@ dbt/
     ├── macros/
     ├── dbt_project.yml
 └── profiles.yml
-
-```text
+```
 ---
 
 ## ⚙️ Requisitos
@@ -40,6 +39,6 @@ dbt/
 - Git
 
 ### Principais dependências Python
-```txt
+
 dbt-core==1.11.2
 dbt-databricks==1.11.4
