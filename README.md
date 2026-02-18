@@ -28,7 +28,7 @@ dbt/
     ├── dbt_project.yml
 └── profiles.yml
 
-
+```text
 ---
 
 ## ⚙️ Requisitos
