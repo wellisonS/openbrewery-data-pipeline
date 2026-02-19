@@ -23,6 +23,15 @@ profiles.yml
 *.env
 
 # =========================
+# Airflow (gerado automaticamente)
+# =========================
+airflow/airflow.db
+airflow/airflow.cfg
+airflow/webserver_config.py
+airflow/logs/
+airflow/standalone_admin_password.txt
+
+# =========================
 # OS / Editor
 # =========================
 .vscode/
