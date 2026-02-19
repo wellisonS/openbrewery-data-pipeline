@@ -14,13 +14,13 @@ with DAG(
     bronze = DatabricksRunNowOperator(
         task_id="bronze_ingestion",
         databricks_conn_id="databricks_default",
-        job_id=1111111  # <-- substituir pelo job_id real do Databricks
+        job_id=500628456012694
     )
 
     silver = DatabricksRunNowOperator(
         task_id="silver_transformation",
         databricks_conn_id="databricks_default",
-        job_id=2222222  # <-- substituir pelo job_id real do Databricks
+        job_id=246678071932823
     )
 
     gold = BashOperator(
