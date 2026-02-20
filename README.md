@@ -19,18 +19,17 @@ A camada **Gold** agrega e organiza os dados para facilitar análises como:
 
 ```text
 openbrewery-data-pipeline/
-├── databricks/
-    ├── bronze_layer/
-    |         └── bronze_job.ipynb
-    |          └── ingest_openbrewery_bronze.py
-    ├── silver_layer/
-    |     └── silver_job.ipynb
-    |     └── transform_openbrewery_silver.py
 ├── airflow/
 │   ├── dags/
 │   │   └── openbrewery_pipeline.py
 │   ├── Dockerfile
-│ 
+├── databricks/
+│   ├── bronze_layer/
+│   │   ├── bronze_job.ipynb
+│   │   └── ingest_openbrewery_bronze.py
+│   ├── silver_layer/
+│   │   ├── silver_job.ipynb
+│   │   └── transform_openbrewery_silver.py
 ├── dbt/
 │   └── openbrewery/
 │       ├── models/
