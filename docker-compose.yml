@@ -4,9 +4,12 @@ services:
     container_name: airflow
     ports:
       - "8080:8080"
+    env_file:
+      - .env
     volumes:
       - ./airflow/dags:/opt/airflow/dags
       - ./dbt:/opt/dbt
+      - ./dbt/openbrewery/profiles.yml:/home/airflow/.dbt/profiles.yml
     environment:
       - AIRFLOW__CORE__LOAD_EXAMPLES=False
     command: bash -c "airflow db migrate && airflow users create --username admin --password admin --firstname admin --lastname admin --role Admin --email admin@admin.com ; airflow standalone"

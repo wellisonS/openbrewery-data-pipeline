@@ -28,7 +28,6 @@ models:
         tests:
           - not_null
           - accepted_values:
-              arguments:
                 values:
                   - micro
                   - brewpub
@@ -40,6 +39,7 @@ models:
                   - closed
                   - taproom
                   - nano
+                  - cidery
                   - bar
 
       - name: breweries_count

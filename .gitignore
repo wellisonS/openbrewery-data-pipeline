@@ -20,7 +20,7 @@ profiles.yml
 # =========================
 # Databricks / Secrets
 # =========================
-*.env
+.env
 
 # =========================
 # Airflow (gerado automaticamente)
