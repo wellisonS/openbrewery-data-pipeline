@@ -24,11 +24,11 @@ with DAG(
     )
 
     gold = BashOperator(
-        task_id="dbt_gold",
+        task_id="dbt_gold_layer",
         bash_command="""
         cd /opt/dbt/openbrewery &&
-        dbt run --select gold &&
-        dbt test --select gold
+        dbt run --select gold_openbrewery &&
+        dbt test --select gold_openbrewery
         """
     )
 
