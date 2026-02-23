@@ -2,7 +2,7 @@
 
 ## 📌 Sobre o projeto
 
-Este projeto implementa um **pipeline de dados usando dbt** para processar dados da Open Brewery API seguindo uma arquitetura em camadas (**Bronze → Silver → Gold**).
+Este projeto implementa um **pipeline de dados utilizando dbt** para processar dados da Open Brewery API seguindo uma arquitetura em camadas (**Bronze → Silver → Gold**).
 
 O objetivo é:
 - Transformar dados brutos em **dados analíticos confiáveis**
@@ -29,7 +29,6 @@ openbrewery-data-pipeline/
 ├── airflow/
 │   ├── dags/
 │   │   └── openbrewery_pipeline.py
-│   ├── Dockerfile
 ├── databricks/
 │   ├── bronze_layer/
 │   │   ├── bronze_job.ipynb
@@ -37,24 +36,51 @@ openbrewery-data-pipeline/
 │   ├── silver_layer/
 │   │   ├── silver_job.ipynb
 │   │   └── transform_openbrewery_silver.py
+│   ├── gold_layer/
+│   │   ├── tests.ipynb
 ├── dbt/
 │   └── openbrewery/
 │       ├── models/
 │       │   └── gold/
 │       └── dbt_project.yml
 ├── docker-compose.yml
+├── Dockerfile
 ```
 ---
 
 ## ⚙️ Requisitos
 
-### Software
-- Python 3.9+
-- dbt Core 1.11+
-- Databricks CLI (ou acesso configurado ao Databricks)
-- Git
+---
 
-### Principais dependências Python
+## 🛠️ Pré-requisitos
 
-dbt-core==1.11.2
-dbt-databricks==1.11.4
+- Docker & Docker Compose instalados
+- Conta e workspace no Databricks
+- Token de autenticação do Databricks
+- Python (para editar notebooks / scripts)
+
+---
+
+## 🚀 Como Rodar
+
+### 1. Ajustar Configurações
+
+No Airflow UI:
+
+1. Acesse: `http://localhost:8080`
+2. Configure a **Connection** para o Databricks:
+   - Host:
+   - Token:
+   - HTTP Path:
+
+Configure também
+- Variáveis de ambiente necessárias
+- Paths para dados, se aplicável
+
+---
+
+### 2. Subir a Orquestração
+
+```bash
+docker compose up --build
+
