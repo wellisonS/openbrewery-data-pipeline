@@ -9,9 +9,16 @@ O objetivo é:
 - Aplicar boas práticas de **modelagem, testes e documentação**
 - Disponibilizar uma camada **Gold pronta para consumo analítico**
 
-A camada **Gold** agrega e organiza os dados para facilitar análises como:
-- Quantidade de cervejarias por estado
-- Distribuição por tipo de cervejaria
+## 📌 Visão Geral
+
+Este projeto implementa um **pipeline de dados** para ingestão, processamento e modelagem de dados da API OpenBrewery.  
+O fluxo segue uma arquitetura em camadas:
+
+- 🟤 **Bronze** – ingestão de dados brutos da API
+- 🟠 **Silver** – transformação intermediária (limpeza / padrão)
+- 🟢 **Gold** – modelagem analítica via dbt
+
+A orquestração é feita com **Apache Airflow** containerizado via **Docker Compose**.
 
 ---
 
