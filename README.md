@@ -74,7 +74,7 @@ openbrewery-data-pipeline/
 ### 1. Clonar o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/openbrewery-data-pipeline.git
+git clone https://github.com/wellisonS/openbrewery-data-pipeline.git
 cd openbrewery-data-pipeline
 ```
 
